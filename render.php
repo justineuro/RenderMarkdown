@@ -63,8 +63,8 @@ if ( file_exists( $md_source ) ) {
       break;
     }
     // convert Markdown to HTML
-    require_once( "markdown.php" );
-    $html = Markdown( $mdown );
+    require_once( "Michelf/Markdown.inc.php" );
+    $html = \Michelf\Markdown::defaultTransform( $mdown );
     // apply SmartyPants
     if ( $settings['smartypants'] ) {
       require_once( "smartypants.php" );
